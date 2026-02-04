@@ -1,6 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+*** Test Cases ***
+Open KKU Website
+    Open Browser to Login Page
+    Close Browser
+
 *** Keywords ***
 Open Browser To Login Page
     ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
@@ -10,3 +15,6 @@ Open Browser To Login Page
     
     Create Webdriver    Chrome    options=${chrome_options}
     Go To    https://computing.kku.ac.th
+
+
+    
